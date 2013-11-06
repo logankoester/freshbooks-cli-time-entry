@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+path = require('path');
+
+exports.command = {
+  description: 'A command-line interface for interacting with Freshbooks Time Entries',
+  arguments: null // Optional arguments string to display
+};
+
+if (require.main === module) {
+  require(path.join(__dirname, '..', 'index.js'));
+}
