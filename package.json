@@ -25,7 +25,9 @@
     "nconf": "~0.6.8",
     "freshbooks": "~0.2.1",
     "freshbooks-cli-config": "~0.3.0",
-    "nodemock": "~0.2.17"
+    "nodemock": "~0.2.17",
+    "lodash": "~2.2.1",
+    "cliff": "~0.1.8"
   },
   "devDependencies": {
     "grunt": "~0.4.1",

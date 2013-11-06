@@ -1,2 +1,2 @@
-    --option, -o [String] - An example option.
+    --list, -l - Display a list of time entries
     --help, -h - Display this message

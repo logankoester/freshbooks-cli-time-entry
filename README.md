@@ -14,14 +14,16 @@ command-line interface to the [FreshBooks](http://freshbooks.com/) API.
 
 ## Usage
 
-    --option, -o [String] - An example option.
+    --list, -l - Display a list of time entries
     --help, -h - Display this message
 
 
 ## Examples
 
-    # Executing time-entry with no options
-    $ freshbooks-time-entry
+    # Printing a list of time entries
+    $ freshbooks time-entry --list
+    id hours date       billed notes
+    1  8     2013-11-05 0      Example entry
 
 
 ## Contributing

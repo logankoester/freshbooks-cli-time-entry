@@ -1,5 +1,5 @@
 (function() {
-  var conf, displayHelp, exec, getFreshbooks, nopt, parsedOptions, path;
+  var conf, displayHelp, exec, getFreshbooks, list, nopt, parsedOptions, path;
 
   path = require('path');
 
@@ -34,17 +34,23 @@
   };
 
   parsedOptions = nopt({
-    option: String,
+    list: Boolean,
     help: Boolean
   }, {
-    o: ['--option'],
+    l: ['--list'],
     h: ['--help']
   }, process.argv, 2);
 
   if (parsedOptions.help) {
     displayHelp();
-  } else if (parsedOptions.option) {
-
+  } else if (parsedOptions.list) {
+    list = require('./lib/list');
+    list.get(getFreshbooks(), function(err, time_entries) {
+      if (err) {
+        console.error;
+      }
+      return console.log(list.formatters.table(time_entries));
+    });
   } else {
     displayHelp();
   }

@@ -19,6 +19,15 @@
       return test.doesNotThrow(function() {
         return nixt().expect(showHelp).run('bin/freshbooks-time-entry --help').code(0).end(test.done);
       });
+    },
+    '--list': function(test) {
+      return test.doesNotThrow(function() {
+        return nixt().expect(function(result) {
+          if (!(result.stdout.match(/Simulated entry/))) {
+            return new Error('Simulated time entry should be listed');
+          }
+        }).run('freshbooks_config=tests/config_file bin/freshbooks-time-entry --list').code(0).end(test.done);
+      });
     }
   };
 

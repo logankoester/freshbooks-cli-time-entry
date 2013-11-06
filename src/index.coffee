@@ -20,26 +20,22 @@ getFreshbooks = ->
   return new Freshbooks base_uri, conf.get('api:token')
 
 parsedOptions = nopt
-  option: String
+  list: Boolean
   help: Boolean
 ,
-  o: ['--option']
+  l: ['--list']
   h: ['--help']
 , process.argv, 2
 
 if parsedOptions.help
   displayHelp()
 
-else if parsedOptions.option
+else if parsedOptions.list
 
-  # YOUR CODE HERE
-  #
-  # Examples:
-  #
-  #   # Retrieve some item from the freshbooks-config key/value store
-  #   someKey = conf.get 'some:key'
-
-  # ...
+  list = require './lib/list'
+  list.get getFreshbooks(), (err, time_entries) ->
+    console.error if err
+    console.log list.formatters.table(time_entries)
 
 else
   displayHelp()
