@@ -20,15 +20,38 @@ getFreshbooks = ->
   return new Freshbooks base_uri, conf.get('api:token')
 
 parsedOptions = nopt
-  list: Boolean
-  help: Boolean
+  list:   Boolean
+  create: Boolean
+  data:   String
+  help:   Boolean
 ,
   l: ['--list']
+  c: ['--create']
   h: ['--help']
 , process.argv, 2
 
 if parsedOptions.help
   displayHelp()
+
+else if parsedOptions.create
+
+  create = require './lib/create'
+
+  every = (err, time_entry) ->
+    console.error err if err
+    console.log create.formatters.log(time_entry)
+
+  after = (err, new_entries) ->
+    console.error err if err
+    console.log create.formatters.table(new_entries)
+
+  if data = parsedOptions.data
+    create.create getFreshbooks(), JSON.parse(data), every, after
+  else
+    data = ''
+    process.stdin.on 'data', (chunk) -> data += chunk
+    process.stdin.on 'end', ->
+      create.create getFreshbooks(), JSON.parse(data), every, after
 
 else if parsedOptions.list
 

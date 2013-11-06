@@ -1,11 +1,15 @@
 nodemock = require 'nodemock'
+fs = require 'fs'
+_ = require 'lodash'
 
 module.exports = class Freshbooks
   constructor: (base_uri, api_token) ->
 
   Time_Entry: class Time_Entry
     constructor: ->
-      return nodemock
+
+      # Mock time_entry.list()
+      mocked = nodemock
         .mock('list')
         .takes (err, time_entries) ->
           time_entries
@@ -23,3 +27,16 @@ module.exports = class Freshbooks
             }
           ]
         ])
+
+      # Mock time_entry.create()
+      mocked.mock('create')
+        .takes (err, time_entry) ->
+          time_entry
+        .calls(0, [
+          null,
+          _.extend(mocked, {
+            time_entry_id: 999
+          })
+        ])
+
+      return mocked

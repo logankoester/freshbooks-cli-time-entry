@@ -27,7 +27,8 @@
     "freshbooks-cli-config": "~0.3.0",
     "nodemock": "~0.2.17",
     "lodash": "~2.2.1",
-    "cliff": "~0.1.8"
+    "cliff": "~0.1.8",
+    "async": "~0.2.9"
   },
   "devDependencies": {
     "grunt": "~0.4.1",

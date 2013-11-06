@@ -28,6 +28,35 @@
           }
         }).run('freshbooks_config=tests/config_file bin/freshbooks-time-entry --list').code(0).end(test.done);
       });
+    },
+    '--create (--data)': function(test) {
+      var env, json;
+      env = 'freshbooks_config=tests/config_file';
+      json = JSON.stringify([
+        {
+          project_id: 1,
+          task_id: 1,
+          staff_id: 1,
+          hours: 4.5,
+          notes: 'first',
+          date: '2013-11-05'
+        }, {
+          project_id: 1,
+          task_id: 1,
+          notes: 'second'
+        }
+      ]);
+      return test.doesNotThrow(function() {
+        return nixt().expect(function(result) {
+          if (!(result.stdout.match(/first/))) {
+            return new Error('first entry should be logged to STDOUT');
+          }
+        }).expect(function(result) {
+          if (!(result.stdout.match(/second/))) {
+            return new Error('second entry should be logged to STDOUT');
+          }
+        }).run("" + env + " bin/freshbooks-time-entry --create --data \'" + json + "\'").code(0).end(test.done);
+      });
     }
   };
 
