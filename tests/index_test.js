@@ -55,7 +55,7 @@
           if (!(result.stdout.match(/second/))) {
             return new Error('second entry should be logged to STDOUT');
           }
-        }).run("" + env + " bin/freshbooks-time-entry --create --data \'" + json + "\'").code(0).end(test.done);
+        }).run("" + env + " bin/freshbooks-time-entry --create --data '" + json + "'").code(0).end(test.done);
       });
     }
   };

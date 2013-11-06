@@ -33,7 +33,9 @@ exports.group =
         .end(test.done)
 
   '--create (--data)': (test) ->
+
     env = 'freshbooks_config=tests/config_file'
+
     json = JSON.stringify [
       {
         project_id: 1
@@ -57,6 +59,6 @@ exports.group =
         .expect (result) ->
           if !(result.stdout.match(/second/))
             return new Error('second entry should be logged to STDOUT')
-        .run("#{env} bin/freshbooks-time-entry --create --data \'#{json}\'")
+        .run("#{env} bin/freshbooks-time-entry --create --data '#{json}'")
         .code(0)
         .end(test.done)
