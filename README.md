@@ -1,7 +1,13 @@
-# freshbooks-cli-time-entry 
-[![Build Status](https://secure.travis-ci.org/logankoester/freshbooks-cli-time-entry.png?branch=master)](http://travis-ci.org/logankoester/freshbooks-cli-time-entry)
-
+# FreshBooks: CLI Time Entry
 > A command-line interface for interacting with Freshbooks Time Entries
+
+[![Build Status](https://secure.travis-ci.org/logankoester/freshbooks-cli-time-entry.png?branch=master)](http://travis-ci.org/logankoester/freshbooks-cli-time-entry)
+[![status](https://sourcegraph.com/api/repos/github.com/logankoester/freshbooks-cli-time-entry/badges/status.png)](https://sourcegraph.com/github.com/logankoester/freshbooks-cli-time-entry)
+[![Dependency Status](https://david-dm.org/logankoester/freshbooks-cli-time-entry.png)](https://david-dm.org/logankoester/freshbooks-cli-time-entry)
+[![devDependency Status](https://david-dm.org/logankoester/freshbooks-cli-time-entry/dev-status.png)](https://david-dm.org/logankoester/freshbooks-cli-time-entry#info=devDependencies)
+[![Gittip](http://img.shields.io/gittip/logankoester.png)](https://www.gittip.com/logankoester/)
+
+[![NPM](https://nodei.co/npm/freshbooks-cli-time-entry.png?downloads=true)](https://nodei.co/npm/freshbooks-cli-time-entry/)
 
 ## Overview
 
@@ -65,3 +71,12 @@ Copyright (c) 2013 Logan Koester
 Licensed under the MIT license.
 
 
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/logankoester/freshbooks-cli-time-entry/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
+[![xrefs](https://sourcegraph.com/api/repos/github.com/logankoester/freshbooks-cli-time-entry/badges/xrefs.png)](https://sourcegraph.com/github.com/logankoester/freshbooks-cli-time-entry)
+[![funcs](https://sourcegraph.com/api/repos/github.com/logankoester/freshbooks-cli-time-entry/badges/funcs.png)](https://sourcegraph.com/github.com/logankoester/freshbooks-cli-time-entry)
+[![top func](https://sourcegraph.com/api/repos/github.com/logankoester/freshbooks-cli-time-entry/badges/top-func.png)](https://sourcegraph.com/github.com/logankoester/freshbooks-cli-time-entry)
+[![library users](https://sourcegraph.com/api/repos/github.com/logankoester/freshbooks-cli-time-entry/badges/library-users.png)](https://sourcegraph.com/github.com/logankoester/freshbooks-cli-time-entry)
+[![authors](https://sourcegraph.com/api/repos/github.com/logankoester/freshbooks-cli-time-entry/badges/authors.png)](https://sourcegraph.com/github.com/logankoester/freshbooks-cli-time-entry)
+[![Total views](https://sourcegraph.com/api/repos/github.com/logankoester/freshbooks-cli-time-entry/counters/views.png)](https://sourcegraph.com/github.com/logankoester/freshbooks-cli-time-entry)
+[![Views in the last 24 hours](https://sourcegraph.com/api/repos/github.com/logankoester/freshbooks-cli-time-entry/counters/views-24h.png)](https://sourcegraph.com/github.com/logankoester/freshbooks-cli-time-entry)
