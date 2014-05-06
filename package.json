@@ -21,27 +21,27 @@
     "url": "http://logankoester.com"
   },
   "dependencies": {
-    "nopt": "~2.1.2",
+    "nopt": "~2.2.1",
     "nconf": "~0.6.8",
     "freshbooks": "~0.2.1",
     "freshbooks-cli-config": "~0.3.0",
-    "nodemock": "~0.2.17",
-    "lodash": "~2.2.1",
+    "nodemock": "~0.3.4",
+    "lodash": "~2.4.1",
     "cliff": "~0.1.8",
-    "async": "~0.2.9"
+    "async": "~0.8.0"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
-    "grunt-contrib-coffee": "~0.7.0",
+    "grunt-contrib-coffee": "~0.10.1",
     "grunt-contrib-clean": "~0.5.0",
-    "grunt-contrib-watch": "~0.5.3",
-    "grunt-bump": "0.0.11",
-    "nixt": "0.0.1",
-    "grunt-contrib-nodeunit": "~0.2.2",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-bump": "0.0.13",
+    "nixt": "~0.3.0",
+    "grunt-contrib-nodeunit": "~0.3.3",
     "grunt-readme-generator": "~0.3.41",
-    "marked-man": "0.0.2",
-    "marked": "~0.2.10",
-    "grunt-contrib-copy": "~0.4.1"
+    "marked-man": "~0.1.3",
+    "marked": "~0.3.2",
+    "grunt-contrib-copy": "~0.5.0"
   },
   "keywords": [
     "freshbooks-cli",
